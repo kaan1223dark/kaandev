@@ -1,5 +1,5 @@
 import Banner from '@/components/Banner/Banner';
-import EventsPreview from '@/components/EventsPreview/EventsPreview';
+import EventsPreview from '@/components/EventsPreview/EventsPreviewcopy';
 import { getDictionary } from '@/dictionaries';
 import { getOrganizationJsonLd } from '@/libs/utils/json-ld';
 import { SupportedLanguage } from '@/models/locale';
