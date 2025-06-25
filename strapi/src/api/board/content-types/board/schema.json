@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boards",
+  "info": {
+    "singularName": "board",
+    "pluralName": "boards",
+    "displayName": "Boards",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "year": {
+      "pluginOptions": {},
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "boardMembers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::board-member.board-member",
+      "mappedBy": "boards"
+    }
+  }
+}

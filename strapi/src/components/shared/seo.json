@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_shared_seos",
+  "info": {
+    "displayName": "Seo",
+    "icon": "search",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "maxLength": 120,
+      "required": true
+    },
+    "metaDescription": {
+      "type": "text",
+      "required": true,
+      "maxLength": 300
+    },
+    "metaAuthor": {
+      "type": "string"
+    },
+    "metaKeywords": {
+      "type": "string",
+      "regex": "^\\s*[\\w\\säö]+(?:,\\s*[\\w\\säö]+)*\\s*$"
+    },
+    "openGraph": {
+      "displayName": "metaOpenGraph",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.meta-open-graph",
+      "required": true
+    },
+    "twitter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.meta-twitter",
+      "required": true
+    }
+  }
+}

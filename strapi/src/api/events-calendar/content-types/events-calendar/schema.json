@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "events_calendars",
+  "info": {
+    "singularName": "events-calendar",
+    "pluralName": "events-calendars",
+    "displayName": "EventsCalendar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Seo": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "component": "shared.seo"
+    }
+  }
+}

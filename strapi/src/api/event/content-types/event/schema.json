@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Events",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NameFi": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": true
+    },
+    "LocationFi": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": true
+    },
+    "DescriptionFi": {
+      "pluginOptions": {},
+      "type": "blocks",
+      "required": true
+    },
+    "StartDate": {
+      "pluginOptions": {},
+      "type": "datetime",
+      "required": true
+    },
+    "EndDate": {
+      "pluginOptions": {},
+      "type": "datetime",
+      "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {}
+    },
+    "Registration": {
+      "displayName": "Registration",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {},
+      "component": "events.registration"
+    },
+    "LocationEn": {
+      "type": "string",
+      "required": true
+    },
+    "NameEn": {
+      "type": "string",
+      "required": true
+    },
+    "DescriptionEn": {
+      "type": "blocks",
+      "required": true
+    },
+    "ImageEn": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

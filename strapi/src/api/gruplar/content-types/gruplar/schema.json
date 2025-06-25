@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gruplars",
+  "info": {
+    "singularName": "gruplar",
+    "pluralName": "gruplars",
+    "displayName": "gruplar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TitleTr": {
+      "type": "string",
+      "required": true
+    },
+    "DescriptionTr": {
+      "type": "blocks",
+      "required": true
+    },
+    "TitleEn": {
+      "type": "string",
+      "required": true
+    },
+    "DescriptionEn": {
+      "type": "blocks",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    }
+  }
+}

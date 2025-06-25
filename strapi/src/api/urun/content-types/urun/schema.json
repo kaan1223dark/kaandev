@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "uruns",
+  "info": {
+    "singularName": "urun",
+    "pluralName": "uruns",
+    "displayName": "Urun"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "marka": {
+      "type": "string"
+    },
+    "Adet": {
+      "type": "integer"
+    }
+  }
+}
