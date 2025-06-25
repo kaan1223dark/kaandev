@@ -1,5 +1,3 @@
-import Banner from '@/components/Banner/Banner';
-import EventsPreview from '@/components/EventsPreview/EventsPreviewcopy';
 import { getDictionary } from '@/dictionaries';
 import { getOrganizationJsonLd } from '@/libs/utils/json-ld';
 import { SupportedLanguage } from '@/models/locale';
@@ -10,7 +8,7 @@ interface HomeProps {
 export default async function Home(props: HomeProps) {
   const params = await props.params;
   const dictionary = await getDictionary(params.lang);
-return (
+  return (
     <>
       <Script
         dangerouslySetInnerHTML={{
@@ -19,8 +17,6 @@ return (
         id="organization-jsonld"
         type="application/ld+json"
       />
-      <Banner lang={params.lang} />
-      <EventsPreview dictionary={dictionary} lang={params.lang} />
     </>
   );
 }
