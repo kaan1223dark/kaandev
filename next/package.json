@@ -19,7 +19,7 @@
     "email-dev": "email dev"
   },
   "dependencies": {
-    "@azure/msal-node": "^2.15.0",
+    "@azure/msal-node": "^3.6.1",
     "@formatjs/intl-localematcher": "^0.5.4",
     "@fullcalendar/core": "^6.1.15",
     "@fullcalendar/daygrid": "^6.1.15",
