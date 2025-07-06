@@ -173,7 +173,7 @@
     "introduction": "Introduction",
     "studies": "Studies",
     "tutoring": "Tutoring",
-    "events": "Events",
+    "events": "Event Calendar",
     "news": "News",
     "communication": "Communication",
     "sanomat": "Publications",
@@ -184,7 +184,7 @@
     "rules": "Rules",
     "board": "Board",
     "office": "Office",
-    "feedback": "Feedback",
+    "feedback": "Suggestions and Comments",
     "honorary_members": "Honorary members",
     "member_benefits": "Member benefits",
     "documents": "Documents",
@@ -221,8 +221,8 @@
       "contact": "Contact"
     },
     "events_preview": {
-      "title": "Upcoming Events",
-      "subtitle": "Check out what's happening",
+      "title": "Finike Event Platform",
+      "subtitle": "It is a roof formation of volunteers who support cultural events in Finikede.",
       "event_calendar": "Event Calendar",
       "event_groups": "Event Groups",
       "courses_and_private_lessons": "Courses and Private Lessons"

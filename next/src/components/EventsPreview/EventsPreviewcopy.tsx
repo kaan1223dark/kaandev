@@ -10,7 +10,19 @@ export default function EventsPreview({
 }: EventsPreviewProps) {
   return (
     <section className="relative bg-[#f5f7fa] py-12 sm:py-16 lg:py-20">
-      {/* Butonlar Container (ön planda) */}
+      {/* Slogan (butonların üzerinde) */}
+      <div className="relative z-10 mb-6 text-center">
+        <h2 className="text-xl font-semibold text-gray-700 sm:text-2xl lg:text-3xl">
+          {dictionary.pages_home.events_preview.title ||
+            'Finike Etkinlik Platformu'}
+        </h2>
+        <h2 className="text-xl font-semibold text-gray-700 sm:text-2xl lg:text-3xl">
+          {dictionary.pages_home.events_preview.subtitle ||
+            'Finikede’deki kültürel etkinlikleri destekleyen gönüllülerin bir çatı oluşumudur.'}
+        </h2>
+      </div>
+
+      {/* Butonlar Container */}
       <div className="relative z-10 mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
         <Link
           className="w-full rounded-2xl bg-indigo-600 px-12 py-4 text-center text-2xl font-bold text-white shadow-lg transition duration-200 hover:bg-indigo-700 sm:w-auto sm:min-w-[350px] sm:text-3xl lg:text-4xl"
@@ -24,10 +36,11 @@ export default function EventsPreview({
           href={`/${lang}/studies`}
         >
           {dictionary.pages_home.events_preview.event_groups ||
-            'Çalışma grupları'}
+            'Etkinlik Grupları'}
         </Link>
       </div>
-      {/* Arka plan deseni (tamamen geride, tıklamaya engel olmaz) */}
+
+      {/* Arka plan deseni */}
       <div className="pointer-events-none absolute inset-0 z-0 opacity-10" />
     </section>
   );

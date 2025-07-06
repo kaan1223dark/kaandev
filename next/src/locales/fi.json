@@ -173,7 +173,7 @@
     "introduction": "Giriş",
     "studies": "Etkinlik Grupları",
     "tutoring": "Özel Ders",
-    "events": "Etkinlikler",
+    "events": "Etkinlik Takvimi",
     "news": "Haberler",
     "communication": "Topluluk",
     "sanomat": "Mesajlar",
@@ -184,7 +184,7 @@
     "rules": "Kurallar",
     "board": "Pano",
     "office": "Ofis",
-    "feedback": "Geri Bildirim",
+    "feedback": "Öneri ve Yorumlar",
     "honorary_members": "Fahri üyeler",
     "member_benefits": "Üye faydaları",
     "documents": "Dökümanlar",
@@ -382,4 +382,3 @@
     "return_home": "Palaa kotisivulle"
   }
 }
-
