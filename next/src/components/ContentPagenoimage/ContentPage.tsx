@@ -1,9 +1,7 @@
 import { dateFormat } from '@/libs/constants';
 import { getStrapiData } from '@/libs/strapi/get-strapi-data';
-import { getStrapiUrl } from '@/libs/strapi/get-strapi-url';
 import { Dictionary, SupportedLanguage } from '@/models/locale';
 import { APIResponseCollection } from '@/types/types';
-import Image from 'next/image';
 import Link from 'next/link';
 import BlockRendererClient from '../BlockRendererClient/BlockRendererClient';
 import SideNavigator from '../SideNavigator/SideNavigator';
@@ -24,21 +22,9 @@ export default async function ContentPage({
     APIResponseCollection<'api::company.company'>
   >(lang, '/api/companies?populate=*', ['company']);
 
-  const imagePath = contentData.attributes.Content.banner.data.attributes.url;
-  const imageUrl = getStrapiUrl(imagePath);
-
   return (
     <div className="flex w-full gap-12">
       <div className="flex w-full flex-col gap-12">
-        <div className="relative h-64 rounded-lg bg-gradient-to-r from-secondary-400 to-primary-300 max-md:h-44">
-          <Image
-            alt="Page banner image"
-            className="rounded-lg object-cover"
-            src={imageUrl}
-            fill
-          />
-        </div>
-
         <div className="relative flex flex-col gap-4">
           <h1>{contentData.attributes.Content.title}</h1>
           <div className="flex flex-col opacity-40">

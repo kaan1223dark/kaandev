@@ -91,7 +91,7 @@ export default async function Event(props: EventProps) {
                   Katıl
                 </button>
               </div>
-               <div className="rounded-xl bg-white p-6 shadow-md">
+              <div className="rounded-xl bg-white p-6 shadow-md">
                 <h3 className="mb-4 text-lg font-semibold">Grup Kuralları</h3>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-start">
@@ -119,4 +119,3 @@ export default async function Event(props: EventProps) {
     </>
   );
 }
-

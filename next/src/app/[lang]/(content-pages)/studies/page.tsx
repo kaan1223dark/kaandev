@@ -1,4 +1,4 @@
-import ContentPage from '@/components/ContentPage/ContentPage';
+import ContentPage from '@/components/ContentPagenoimage/ContentPage';
 import { getDictionary } from '@/dictionaries';
 import { formatMetadata } from '@/libs/strapi/format-metadata';
 import { getStrapiData } from '@/libs/strapi/get-strapi-data';
