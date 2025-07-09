@@ -19,8 +19,9 @@ export default async function Home(props: HomeProps) {
         id="organization-jsonld"
         type="application/ld+json"
       />
-      <Banner lang={params.lang} />
+
       <EventsPreview dictionary={dictionary} lang={params.lang} />
+      <Banner lang={params.lang} />
     </>
   );
 }

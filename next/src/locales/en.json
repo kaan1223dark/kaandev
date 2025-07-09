@@ -360,8 +360,8 @@
     "email_subscription": "Email subscription"
   },
   "pages_feedback": {
-    "title": "Feedback",
-    "description": "Anonymous feedback is addressed in board meetings. The related discussion can be found in the minutes unless the feedback provider specifically requests otherwise. Feedback sent without contact information cannot be responded to personally.",
+    "title": "Suggestions and Comments",
+    "description": "Anonymous Suggestions and Comment is addressed in board meetings. The related discussion can be found in the minutes unless the feedback provider specifically requests otherwise. Feedback sent without contact information cannot be responded to personally.",
     "name": "Your name",
     "email": "Your email",
     "receiver": "Receiver",

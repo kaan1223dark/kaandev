@@ -1,10 +1,16 @@
 import { getStrapiData } from '@/libs/strapi/get-strapi-data';
-import { SupportedLanguage } from '@/models/locale';
+import { Dictionary, SupportedLanguage } from '@/models/locale';
 import { APIResponseCollection } from '@/types/types';
+import Link from 'next/link';
 import { redirect } from 'next/navigation';
+
 interface EventProps {
   params: Promise<{ slug: string; lang: SupportedLanguage }>;
+  contentData: any;
+  dictionary: Dictionary;
+  lang: SupportedLanguage;
 }
+
 export default async function Event(props: EventProps) {
   const params = await props.params;
   /* eslint-disable */
@@ -31,10 +37,11 @@ export default async function Event(props: EventProps) {
       : 'Boş veya metin değil';
   const secondChild =
     event.data[0].attributes.DescriptionTr?.[0]?.children?.[0];
-  const texttwo =
-    params.lang === 'tr' && secondChild && secondChild.type === 'text'
-      ? secondChild.text
-      : 'Boş veya metin değil';
+
+  // const texttwo =
+  params.lang === 'tr' && secondChild && secondChild.type === 'text'
+    ? secondChild.text
+    : 'Boş veya metin değil';
   /* eslint-disable */
   // ... diğer importlar ve kodlar
   console.log('yazdir sayfası render edildi! ' + JSON.stringify(text, null, 2));
@@ -42,76 +49,38 @@ export default async function Event(props: EventProps) {
   /* eslint-enable */
   return (
     <>
-      <div className="container mx-auto px-4 py-8">
-        <div className="mx-auto max-w-4xl">
-          {/* Başlık Bölümü (Tüm sayfalarda aynı) */}
-          <div className="mb-10 text-center">
-            <h1 className="mb-3 text-4xl font-bold text-gray-800">
-              {'baslık'}
-            </h1>
-            <p className="text-xl text-gray-600">{'ss'}</p>
-          </div>
-          {/* İçerik Bölümü (Dinamik) */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {/* Sol Kolon - Grup Bilgileri */}
-            <div className="md:col-span-2">
-              <div className="overflow-hidden rounded-xl bg-white shadow-md">
-                <div className="h-64 w-full rounded-xl border-2 border-dashed bg-gray-200 md:h-80" />
-                <div className="p-6">
-                  <div className="prose max-w-none" />
-                  <div className="mt-6">
-                    <h3 className="mb-3 text-xl font-semibold">
-                      {params.lang === 'en' ? text : texttwo}
-                    </h3>
-                    <ul className="space-y-2">
-                      <li key={'a'} className="flex items-start">
-                        <span className="mr-2 text-blue-600">•</span>
-                        <span>{'ss'}</span>
-                      </li>
-                      <li key={'b'} className="flex items-start">
-                        <span className="mr-2 text-blue-600">•</span>
-                        <span>{'ss'}</span>
-                      </li>
-                      <li key={'c'} className="flex items-start">
-                        <span className="mr-2 text-blue-600">•</span>
-                        <span>{'ss'}</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+      <div className="flex w-full gap-12">
+        <div className="flex w-full flex-col gap-12">
+          <div className="relative aspect-[3/1] w-full rounded-lg bg-gradient-to-r from-secondary-400 to-primary-300" />
+
+          <div className="relative flex flex-col gap-4">
+            <h1> {params.lang === 'en' ? text : text}</h1>
+            <div className="flex flex-col opacity-40">
+              <p className="text-sm">
+                {'ss'}: {'sss'}
+              </p>
             </div>
-            <div>
-              <div className="mb-6 rounded-xl bg-blue-50 p-6">
-                <h3 className="mb-3 text-lg font-semibold">
-                  Öne Çıkan Etkinlik
-                </h3>
-                <p className="text-gray-700">{'ssssss'}</p>
-                <button className="mt-4 w-full rounded-lg bg-blue-600 py-2 text-white transition hover:bg-blue-700">
-                  Katıl
-                </button>
-              </div>
-              <div className="rounded-xl bg-white p-6 shadow-md">
-                <h3 className="mb-4 text-lg font-semibold">Grup Kuralları</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-start">
-                    <span className="mr-2 text-blue-600">•</span>
-                    <span>Tüm üyeler birbirine saygı göstermelidir</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-blue-600">•</span>
-                    <span>Etkinliklere zamanında katılım önemlidir</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-blue-600">•</span>
-                    <span>Malzeme ve ekipmanlar özenle kullanılmalıdır</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-blue-600">•</span>
-                    <span>Grup kararlarına uyulmalıdır</span>
-                  </li>
-                </ul>
-              </div>
+            <div className="luuppi-pattern absolute -left-28 -top-28 -z-50 h-[401px] w-[601px] max-md:left-0 max-md:w-full" />
+          </div>
+          <article className="organization-page prose prose-custom max-w-full decoration-secondary-400 transition-all duration-300 ease-in-out" />
+
+          <div className="luuppi-questions-bg flex flex-col items-center justify-center gap-4 rounded-xl bg-secondary-400 p-6 text-center text-white shadow-sm">
+            <h2 className="text-2xl font-bold">{'sss'}</h2>
+            <p className="max-w-md">{'sss'}</p>
+            <Link className="link text-white" href={`mailto:${'dss'}`}>
+              {'xxx'}
+            </Link>
+          </div>
+        </div>
+        <div className="sticky top-36 flex h-[calc(100vh-180px)] w-full max-w-80 flex-col gap-8 max-lg:hidden">
+          <div className="flex flex-col" />
+
+          <div className="flex w-full flex-col gap-2 px-4">
+            <h6 className="text-lg font-bold">{'sss'}</h6>
+            <div className="flex flex-col gap-4">
+              <Link key={'sss'} href={'dd'} />
+              <Link key={'ssss'} href={'dd'} />
+              <Link key={'sssss'} href={'dd'} />
             </div>
           </div>
         </div>
