@@ -66,28 +66,19 @@ export default async function Event(props: EventProps) {
       ? eventData.TitleEn
       : eventData.TitleTr;
 
-  const text =
-    params.lang === 'en' && firstChild?.type === 'text'
-      ? firstChild.text
-      : 'Boş veya metin değil';
 
-  const texttwo =
-    params.lang === 'tr' && secondChild?.type === 'text'
-      ? secondChild.text
-      : 'Boş veya metin değil';
-
-  console.log(
+    console.log(
     'yazdir sayfası render edildiss! ' +
       JSON.stringify(imageUrl, null, 2)
   );
 
-  return (
-     <div className="flex w-full gap-12">
-      <div className="flex w-full flex-col gap-12">
-        <div className="relative aspect-[3/1] w-full rounded-lg bg-gradient-to-r from-secondary-400 to-primary-300">
-          <Image
-            alt="Page banner image"
-            className="rounded-lg object-cover"
+    return (
+      <div className="flex w-full gap-12">
+        <div className="flex w-full flex-col gap-12">
+          <div className="relative aspect-[3/1] w-full rounded-lg bg-gradient-to-r from-secondary-400 to-primary-300">
+            <Image
+              alt="Page banner image"
+              className="rounded-lg object-cover"
             src={imageUrl}
             fill
           />
