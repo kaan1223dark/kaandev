@@ -2,8 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Luuppi ry',
-    short_name: 'Luuppi',
+    name: 'sLuuppi',
     description:
       'Luuppi ry is subject assosiation for students of mathematics, statistical data analysis and computer science at Tampere University.',
     start_url: '/',

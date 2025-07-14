@@ -169,9 +169,9 @@
   "navigation": {
     "home": "Home",
     "songbook": "Songbook",
-    "organization": "Organization",
+    "organization": "About Us",
     "introduction": "Introduction",
-    "studies": "Studies",
+    "studies": "Event Groups",
     "tutoring": "Tutoring",
     "events": "Event Calendar",
     "news": "News",
@@ -306,11 +306,11 @@
     "title": "Page not found",
     "description": "Ooops.... The page you are looking for does not exist. Please check the URL and try again.",
     "return_home": "Back to home",
-    "seo_title": "Luuppi ry | Page not found",
+    "seo_title": "finikeetkinlik | Page not found",
     "seo_description": "The page you are looking for does not exist. Page might have been removed or the URL is incorrect."
   },
   "seo": {
-    "title": "Luuppi ry | Subject association for mathematics, statistical data analysis, and computer science students at the University of Tampere",
+    "title": "finikeetkinlik",
     "description": "Luuppi ry is the subject association for mathematics, statistical data analysis, and computer science students at the University of Tampere. Luuppi has actively represented the interests of its members and organized recreational activities since 1969. With its membership, Luuppi is the largest subject association at the University of Tampere!"
   },
   "footer": {
@@ -368,7 +368,7 @@
     "subject": "Subject",
     "message": "Message",
     "send": "Send",
-    "seo_title": "Luuppi ry | Feedback",
+    "seo_title": "finikeetkinlik",
     "seo_description": "Send feedback to Luuppi ry anonymously or with contact information. Feedback is addressed in board meetings.",
     "send_feedback": "Send feedback"
   },
@@ -377,7 +377,7 @@
     "description": "An error occurred while processing your request.",
     "auth_title": "Authentication error",
     "auth_description": "There was an error during authentication. Please try again later.",
-    "seo_title": "Luuppi ry | Error",
+    "seo_title": "finikeetkinlik | Error",
     "seo_description": "An error occurred while processing your request.",
     "return_home": "Back to home"
   }

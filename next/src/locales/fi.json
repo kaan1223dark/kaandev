@@ -306,12 +306,11 @@
     "title": "Sayfa bulunamadı",
     "description": "Aradığınız sayfa bulunamadı. Ana sayfaya dönebilir veya belirli bir sayfayı arıyorsanız bizimle iletişime geçebilirsiniz.",
     "return_home": "Ana sayfaya dön",
-    "seo_title": "Luuppi ry | Sayfa bulunamadı",
+    "seo_title": "Finikeetkinlik| Sayfa bulunamadı",
     "seo_description": "Aradığınız sayfa bulunamadı. Sayfa silinmiş veya taşınmış olabilir."
   },
   "seo": {
-    "title": "Luuppi ry | Tampereen yliopiston matematiikan, tilastotieteen ja tietojenkäsittelyn opiskelijoiden ainejärjestö",
-    "description": "Luuppi ry on Tampereen yliopiston matematiikan, tilastotieteen ja tietojenkäsittelyn opiskelijoiden ainejärjestö. Luuppi on toiminut aktiivisesti jäsentensä etujenvalvojana ja vapaa-ajantoiminnan järjestäjänä jo vuodesta 1969. Jäsenmäärältään Luuppi on Tampereen yliopiston suurin ainejärjestö!"
+    "title": "finikeetkinlik"
   },
   "footer": {
     "description": "Luuppi ry on Tampereen yliopiston tietojenkäsittelytieteen, matematiikan ja tilastollisen data-analyysin ainejärjestö."
@@ -368,12 +367,12 @@
     "subject": "Konu",
     "message": "Mesaj",
     "send": "Gönder",
-    "seo_title": "Luuppi ry | Palautee",
+    "seo_title": "finikeetkinlik |",
     "seo_description": "Anna palautetta Luupille. Nimettömät palautteet käsitellään hallituksen kokouksissa.",
     "send_feedback": "Geri bildirim gönder"
   },
   "pages_error": {
-    "title": "Sayfa bulunamadı",
+    "title": "Sayfa bulunamadi",
     "description": "Odottamaton virhe tapahtui käsitellessämme pyyntöäsi.",
     "auth_title": "Virhe kirjautumisessa",
     "auth_description": "Kirjautumisen yhteydessä tapahtui virhe. Yritä myöhemmin uudelleen.",

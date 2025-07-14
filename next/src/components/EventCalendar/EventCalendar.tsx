@@ -34,7 +34,7 @@ export default function EventCalendar({
 
   const handleEventClick = (e: any) => {
     const eventId = e.event.id;
-    router.push(`/${lang}/events/${eventId}`);
+    router.push(`/${lang}/etkinliktakvimi/${eventId}`);
   };
 
   useEffect(() => {

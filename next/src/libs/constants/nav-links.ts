@@ -20,7 +20,7 @@ export const navLinksDesktop: NavLink[] = [
     sublinks: [
       {
         translation: 'introduction',
-        href: '/organization',
+        href: '/hakkimizda',
       },
     ],
   },
@@ -29,11 +29,11 @@ export const navLinksDesktop: NavLink[] = [
     sublinks: [
       {
         translation: 'general',
-        href: '/studies',
+        href: '/etkinlikguruplari',
       },
       {
         translation: 'workshops',
-        href: '/studies/workshops',
+        href: '/etkinlikguruplari/atolyeler',
       },
     ],
   },
@@ -42,32 +42,32 @@ export const navLinksDesktop: NavLink[] = [
     sublinks: [
       {
         translation: 'general',
-        href: '/tutoring',
+        href: '/ozelders',
       },
       {
         translation: 'larpake',
-        href: '/tutoring/larpake',
+        href: '/ozelders/larpake',
       },
       {
         translation: 'faq',
-        href: '/tutoring/faq',
+        href: '/ozelders/faq',
       },
     ],
   },
   {
     translation: 'events',
-    href: '/events',
+    href: '/etkinliktakvimi',
   },
   {
     translation: 'contact',
     sublinks: [
       {
         translation: 'contact',
-        href: '/contact',
+        href: '/iletisim',
       },
       {
         translation: 'feedback',
-        href: '/feedback',
+        href: '/oneriveyorum',
       },
     ],
   },
@@ -107,22 +107,22 @@ export const navLinksMobile: NavLink[] = [
   },
   {
     translation: 'events',
-    href: '/events',
+    href: '/etkinliktakvimi',
   },
   {
     translation: 'tutoring',
     sublinks: [
       {
         translation: 'general',
-        href: '/tutoring',
+        href: '/ozelders',
       },
       {
         translation: 'larpake',
-        href: '/tutoring/larpake',
+        href: '/ozelders/larpake',
       },
       {
         translation: 'faq',
-        href: '/tutoring/faq',
+        href: '/ozelders/faq',
       },
     ],
   },
@@ -131,19 +131,19 @@ export const navLinksMobile: NavLink[] = [
     sublinks: [
       {
         translation: 'introduction',
-        href: '/organization',
+        href: '/hakkimizda',
       },
       {
         translation: 'rules',
-        href: '/organization/rules',
+        href: '/hakkimizda/rules',
       },
       {
         translation: 'board',
-        href: '/organization/board',
+        href: '/hakkimizda/board',
       },
       {
         translation: 'office',
-        href: '/organization/office',
+        href: '/hakkimizda/office',
       },
       {
         translation: 'tradition_guidelines',
@@ -172,11 +172,11 @@ export const navLinksMobile: NavLink[] = [
     sublinks: [
       {
         translation: 'general',
-        href: '/studies',
+        href: '/etkinlikguruplari',
       },
       {
         translation: 'workshops',
-        href: '/studies/workshops',
+        href: '/etkinlikguruplari/atolyeler',
       },
     ],
   },
@@ -215,11 +215,11 @@ export const navLinksMobile: NavLink[] = [
     sublinks: [
       {
         translation: 'contact',
-        href: '/contact',
+        href: '/iletisim',
       },
       {
         translation: 'feedback',
-        href: '/feedback',
+        href: '/oneriveyorum',
       },
     ],
   },

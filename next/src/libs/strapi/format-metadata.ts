@@ -30,7 +30,7 @@ export const formatMetadata = (
 
   if (isNews && !openGraphImage) {
     const ogUrl = new URL('https://luuppi-opengraph.vercel.app/api/og');
-    ogUrl.searchParams.append('author', seo.metaAuthor ?? 'Luuppi ry');
+    ogUrl.searchParams.append('author', seo.metaAuthor ?? 'finikeetkinlik');
     ogUrl.searchParams.append('title', seo.metaTitle);
     ogUrl.searchParams.append(
       'published',
@@ -40,7 +40,7 @@ export const formatMetadata = (
   }
 
   return {
-    title: `${seo.metaTitle} | Luuppi ry`,
+    title: `${seo.metaTitle} | finikeetkinlik`,
     description: seo.metaDescription,
     authors: {
       name: seo.metaAuthor,
@@ -58,7 +58,7 @@ export const formatMetadata = (
       description: seo.openGraph.openGraphDescription,
       url: pathname,
       images: openGraphImage ? [openGraphImage] : undefined,
-      siteName: 'Luuppi ry',
+      siteName: 'finikeetkinlik',
     },
     twitter: {
       title: seo.twitter.twitterTitle,
