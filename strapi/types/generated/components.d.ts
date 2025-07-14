@@ -88,6 +88,17 @@ export interface SharedMetaOpenGraph extends Schema.Component {
   };
 }
 
+export interface SharedContact extends Schema.Component {
+  collectionName: 'components_shared_contacts';
+  info: {
+    displayName: 'Contact';
+  };
+  attributes: {
+    ad: Attribute.String;
+    mail: Attribute.Email & Attribute.Required;
+  };
+}
+
 export interface SharedContactBanner extends Schema.Component {
   collectionName: 'components_shared_contact_banners';
   info: {
@@ -237,6 +248,7 @@ declare module '@strapi/types' {
       'shared.page-content': SharedPageContent;
       'shared.meta-twitter': SharedMetaTwitter;
       'shared.meta-open-graph': SharedMetaOpenGraph;
+      'shared.contact': SharedContact;
       'shared.contact-banner': SharedContactBanner;
       'events.registration': EventsRegistration;
       'events.quotas': EventsQuotas;

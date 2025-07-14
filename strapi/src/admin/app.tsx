@@ -25,7 +25,7 @@ export default {
       // 'sk',
       // 'sv',
       // 'th',
-      // 'tr',
+      "tr",
       // 'uk',
       // 'vi',
       // 'zh-Hans',

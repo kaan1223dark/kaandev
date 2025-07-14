@@ -4,7 +4,8 @@
   "info": {
     "singularName": "gruplar",
     "pluralName": "gruplars",
-    "displayName": "gruplar"
+    "displayName": "gruplar",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -30,6 +31,33 @@
     "slug": {
       "type": "uid",
       "required": true
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "gruplars"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "imageEn": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

@@ -37,6 +37,18 @@
       },
       "required": true,
       "component": "shared.seo"
+    },
+    "ContactArea": {
+      "displayName": "Contact",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.contact",
+      "required": true
     }
   }
 }

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_contacts",
+  "info": {
+    "displayName": "Contact"
+  },
+  "options": {},
+  "attributes": {
+    "ad": {
+      "type": "string"
+    },
+    "mail": {
+      "type": "email",
+      "required": true
+    }
+  }
+}

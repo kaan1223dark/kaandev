@@ -771,6 +771,11 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
+    gruplars: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToMany',
+      'api::gruplar.gruplar'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1134,6 +1139,13 @@ export interface ApiContactContact extends Schema.SingleType {
           localized: true;
         };
       }>;
+    ContactArea: Attribute.Component<'shared.contact'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1335,6 +1347,7 @@ export interface ApiGruplarGruplar extends Schema.CollectionType {
     singularName: 'gruplar';
     pluralName: 'gruplars';
     displayName: 'gruplar';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1345,6 +1358,13 @@ export interface ApiGruplarGruplar extends Schema.CollectionType {
     TitleEn: Attribute.String & Attribute.Required;
     DescriptionEn: Attribute.Blocks & Attribute.Required;
     slug: Attribute.UID & Attribute.Required;
+    owner: Attribute.Relation<
+      'api::gruplar.gruplar',
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    imageEn: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
