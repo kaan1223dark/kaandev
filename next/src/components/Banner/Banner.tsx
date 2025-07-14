@@ -4,7 +4,9 @@ import Image from 'next/image';
 import bannerDesktop from '../../../public/banner.png';
 import bannerMobile from '../../../public/banner_mobile.png';
 
-
+interface BannerProps {
+  lang: SupportedLanguage;
+}
 export default function Banner({}: BannerProps) {
   return (
     <section className="mb-20">
