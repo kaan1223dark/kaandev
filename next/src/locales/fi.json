@@ -310,7 +310,8 @@
     "seo_description": "Aradığınız sayfa bulunamadı. Sayfa silinmiş veya taşınmış olabilir."
   },
   "seo": {
-    "title": "finikeetkinlik"
+    "title": "finikeetkinlik",
+    "description": "finikeetkinlik"
   },
   "footer": {
     "description": "Luuppi ry on Tampereen yliopiston tietojenkäsittelytieteen, matematiikan ja tilastollisen data-analyysin ainejärjestö."
