@@ -7,7 +7,7 @@ import bannerMobile from '../../../public/banner_mobile.png';
 interface BannerProps {
   lang: SupportedLanguage;
 }
-export default function Banner({}: BannerProps) {
+export default function Banner({ }: BannerProps) {
   return (
     <section className="mb-20">
       {' '}
@@ -21,6 +21,7 @@ export default function Banner({}: BannerProps) {
             draggable={false}
             quality={100}
             src={bannerDesktop}
+
             style={{ objectFit: 'cover' }}
             fill
             priority
