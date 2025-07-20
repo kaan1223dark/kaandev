@@ -1,6 +1,6 @@
 import { getStrapiData } from '@/libs/strapi/get-strapi-data';
 import { getStrapiUrl } from '@/libs/strapi/get-strapi-url';
-import { Dictionary, SupportedLanguage } from '@/models/locale';
+import { SupportedLanguage } from '@/models/locale';
 import { APIResponseCollection } from '@/types/types';
 import { BlocksContent } from '@strapi/blocks-react-renderer';
 import Image from 'next/image';
@@ -23,9 +23,6 @@ function getPlainText(blocks?: BlocksContent): string {
 
 interface EventProps {
   params: { slug: string; lang: SupportedLanguage };
-  contentData: any;
-  dictionary: Dictionary;
-  lang: SupportedLanguage;
 }
 
 export default async function Event({ params }: EventProps) {
