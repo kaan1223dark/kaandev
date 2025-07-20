@@ -21,11 +21,11 @@ function getPlainText(blocks?: BlocksContent): string {
     .join('\n\n');
 }
 
-interface EventProps {
+export default async function Event({
+  params,
+}: {
   params: { slug: string; lang: SupportedLanguage };
-}
-
-export default async function Event({ params }: EventProps) {
+}) {
   const url = `/api/gruplars?filters[slug][$eq]=${params.slug}&populate=*`;
 
   const event = await getStrapiData<
