@@ -161,4 +161,5 @@ export default async function Event(props: EventProps) {
       )}
     </div>
   );
+
 }
