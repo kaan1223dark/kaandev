@@ -83,7 +83,7 @@ export default async function Event(props: EventProps) {
               <Image
                 alt="Page banner image"
                 className="rounded-lg object-cover"
-                src={imageUrl}
+                src={'http://localhost:1337/uploads/Whats_App_Image_2025_06_19_at_18_39_35_dc250d1c68.jpeg'}
                 fill
               />
             ) : (
@@ -96,7 +96,7 @@ export default async function Event(props: EventProps) {
             <h1 className="break-words">
               {
                 event.data.attributes[
-                  params.lang === 'en' ? 'NameEn' : 'NameFi'
+                params.lang === 'en' ? 'NameEn' : 'NameFi'
                 ]
               }
             </h1>
@@ -133,7 +133,7 @@ export default async function Event(props: EventProps) {
                 <p className="line-clamp-2">
                   {
                     event.data.attributes[
-                      params.lang === 'en' ? 'LocationEn' : 'LocationFi'
+                    params.lang === 'en' ? 'LocationEn' : 'LocationFi'
                     ]
                   }
                 </p>
@@ -166,7 +166,7 @@ export default async function Event(props: EventProps) {
             <BlockRendererClient
               content={
                 event.data.attributes[
-                  params.lang === 'en' ? 'DescriptionEn' : 'DescriptionFi'
+                params.lang === 'en' ? 'DescriptionEn' : 'DescriptionFi'
                 ]
               }
             />
@@ -200,7 +200,7 @@ export async function generateMetadata(props: EventProps): Promise<Metadata> {
 
   const description = getPlainText(
     event.data.attributes[
-      params.lang === 'en' ? 'DescriptionEn' : 'DescriptionFi'
+    params.lang === 'en' ? 'DescriptionEn' : 'DescriptionFi'
     ],
   );
 
@@ -219,7 +219,7 @@ export async function generateMetadata(props: EventProps): Promise<Metadata> {
   const descriptionCutted = description.length > 300;
 
   return {
-    title: `${title} | Luuppi ry`,
+    title: `${title} | Finikeetkinlik`,
     description: description.slice(0, 300) + (descriptionCutted ? '...' : ''),
     alternates: {
       canonical: pathname,
@@ -232,7 +232,7 @@ export async function generateMetadata(props: EventProps): Promise<Metadata> {
       title,
       description: description.slice(0, 300) + (descriptionCutted ? '...' : ''),
       url: pathname,
-      siteName: 'Luuppi ry',
+      siteName: 'finikeetkinlik',
       images: imageUrl,
     },
     twitter: {

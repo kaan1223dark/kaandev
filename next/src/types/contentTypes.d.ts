@@ -2414,4 +2414,3 @@ declare module '@strapi/types' {
     }
   }
 }
-

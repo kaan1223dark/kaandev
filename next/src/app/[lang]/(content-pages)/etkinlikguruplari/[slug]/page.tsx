@@ -2,6 +2,7 @@ import { getStrapiData } from '@/libs/strapi/get-strapi-data';
 import { getStrapiUrl } from '@/libs/strapi/get-strapi-url';
 import { SupportedLanguage } from '@/models/locale';
 import { APIResponseCollection } from '@/types/types';
+
 import { BlocksContent } from '@strapi/blocks-react-renderer';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
@@ -21,11 +22,12 @@ function getPlainText(blocks?: BlocksContent): string {
     .join('\n\n');
 }
 
-export default async function Event({
-  params,
-}: {
-  params: { slug: string; lang: SupportedLanguage };
-}) {
+interface EventProps {
+  params: Promise<{ slug: string; lang: SupportedLanguage }>;
+}
+export default async function Event(props: EventProps) {
+  const params = await props.params;
+
   const url = `/api/gruplars?filters[slug][$eq]=${params.slug}&populate=*`;
 
   const event = await getStrapiData<
@@ -44,6 +46,11 @@ export default async function Event({
       : eventData.Image?.data?.attributes?.url;
 
   const imageUrl = imageUrlLocalized ? getStrapiUrl(imageUrlLocalized) : null;
+  const imageUrsl = 'http://localhost:1337/uploads/Whats_App_Image_2025_06_19_at_18_39_35_dc250d1c68.jpeg';
+
+  // eslint-disable-next-line no-console
+  console.log('yazdir sayfası render edildiss! ' +
+    JSON.stringify(imageUrl, null, 2));
 
   const descriptionRaw =
     params.lang === 'en' ? eventData.DescriptionEn : eventData.DescriptionTr;
@@ -59,11 +66,11 @@ export default async function Event({
     <div className="flex w-full gap-12">
       <div className="flex w-full flex-col gap-12">
         <div className="relative aspect-[3/1] w-full rounded-lg bg-gradient-to-r from-secondary-400 to-primary-300">
-          {imageUrl && (
+          {imageUrsl && (
             <Image
               alt="Page banner image"
               className="rounded-lg object-cover"
-              src={imageUrl}
+              src={imageUrsl}
               fill
             />
           )}
