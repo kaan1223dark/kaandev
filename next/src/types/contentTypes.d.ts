@@ -1212,10 +1212,10 @@ export interface ApiGruplarsGruplars extends Schema.CollectionType {
   attributes: {
     TitleTr: Attribute.String & Attribute.Required;
     DescriptionTr: Attribute.Blocks & Attribute.Required;
-    Image: Attribute.Media<'images'>;
+    image: Attribute.Media<'images'>;
     TitleEn: Attribute.String & Attribute.Required;
     DescriptionEn: Attribute.Blocks & Attribute.Required;
-    ImageEn: Attribute.Media<'images'>;
+    imageEn: Attribute.Media<'images'>;
     slug: Attribute.UID;
     createdBy: Attribute.Relation<
       'api::gruplar.gruplar',
