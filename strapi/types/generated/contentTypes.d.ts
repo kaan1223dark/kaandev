@@ -1365,6 +1365,14 @@ export interface ApiGruplarGruplar extends Schema.CollectionType {
     >;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     imageEn: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Date: Attribute.DateTime & Attribute.Required;
+    LocationFi: Attribute.String & Attribute.Required;
+    LocationEn: Attribute.String & Attribute.Required;
+    Tel: Attribute.Decimal & Attribute.Required;
+    SideimgTr: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    SideimgEn: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -50,6 +50,44 @@
       ]
     },
     "imageEn": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Date": {
+      "required": true,
+      "type": "datetime"
+    },
+    "LocationFi": {
+      "type": "string",
+      "required": true
+    },
+    "LocationEn": {
+      "type": "string",
+      "required": true
+    },
+    "Tel": {
+      "type": "decimal",
+      "required": true
+    },
+    "SideimgTr": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "SideimgEn": {
       "allowedTypes": [
         "images",
         "files",
@@ -57,7 +95,8 @@
         "audios"
       ],
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "required": true
     }
   }
 }
