@@ -2,7 +2,9 @@ import { SupportedLanguage } from '@/models/locale';
 import Image from 'next/image';
 
 import bannerDesktop from '../../../public/banner.png';
-import bannerMobile from '../../../public/banner_mobile.png';
+
+// mobile banner tasarlayana kadar desktop banner kullandım .
+// import bannerMobile from '../../../public/banner_mobile.png';
 
 interface BannerProps {
   lang: SupportedLanguage;
@@ -31,7 +33,7 @@ export default function Banner({ }: BannerProps) {
             className="object-cover lg:hidden"
             draggable={false}
             quality={100}
-            src={bannerMobile}
+            src={bannerDesktop}
             style={{ objectFit: 'cover' }}
             fill
             priority

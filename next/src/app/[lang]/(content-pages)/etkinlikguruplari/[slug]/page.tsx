@@ -99,41 +99,48 @@ export default async function Event(props: EventProps) {
         <article className="prose prose-custom max-w-full decoration-secondary-400 transition-all duration-300 ease-in-out">
           {descriptionText}
         </article>
-        <div className="flex items-center">
-          <div className="mr-2 flex items-center justify-center rounded-full bg-primary-400 p-2 text-white">
-            <IoCallOutline className="shrink-0 text-2xl" />
-          </div>
-          <p className="line-clamp-2">
-            {
-              Tel
-            }
-          </p>
-        </div>
-        <div className="flex items-center">
-          <div className="mr-2 flex items-center justify-center rounded-full bg-primary-400 p-2 text-white">
-            <IoLocationOutline className="shrink-0 text-2xl" />
-          </div>
-          <p className="line-clamp-2">
-            {
-              location
-            }
-          </p>
-        </div>
-        <div className="flex items-center">
-          <div className="mr-2 flex items-center justify-center rounded-full bg-primary-400 p-2 text-white">
-            <IoCalendarOutline className="shrink-0 text-2xl" />
-          </div>
-          <p className="line-clamp-2">
-            {
-              new Date(eventData.Date).toLocaleString(
-                params.lang,
-                dateFormat,
-              )
+        <div className="mb-12 mt-4 flex gap-4 rounded-lg bg-background-50">
+          <span className="w-1 shrink-0 rounded-l-lg bg-secondary-400" />
+          <div className="flex max-w-full flex-col gap-2 rounded-lg py-4 pr-4 font-semibold max-sm:text-sm">
+            <div className="flex items-center">
+              <div className="mr-2 flex items-center justify-center rounded-full bg-primary-400 p-2 text-white">
+                <IoCallOutline className="shrink-0 text-2xl" />
+              </div>
+              <p className="line-clamp-2">
+                {
+                  Tel
+                }
+              </p>
+            </div>
+            <div className="flex items-center">
+              <div className="mr-2 flex items-center justify-center rounded-full bg-primary-400 p-2 text-white">
+                <IoLocationOutline className="shrink-0 text-2xl" />
+              </div>
+              <p className="line-clamp-2">
+                {
+                  location
+                }
+              </p>
+            </div>
+            <div className="flex items-center">
+              <div className="mr-2 flex items-center justify-center rounded-full bg-primary-400 p-2 text-white">
+                <IoCalendarOutline className="shrink-0 text-2xl" />
+              </div>
+              <p className="line-clamp-2">
+                {
+                  new Date(eventData.Date).toLocaleString(
+                    params.lang,
+                    dateFormat,
+                  )
 
-            }
+                }
 
-          </p>
+              </p>
+            </div>
+
+          </div>
         </div>
+
         <div className="luuppi-questions-bg flex flex-col items-center justify-center gap-4 rounded-xl bg-secondary-400 p-6 text-center text-white shadow-sm">
 
           <h2 className="text-2xl font-bold">Etkinlik Detayları</h2>
@@ -143,7 +150,7 @@ export default async function Event(props: EventProps) {
 
       {/* Afiş Bölümü - Mobilde üstte, Desktop'ta sağda sticky */}
       {posterUrl && (
-        <div className="sticky top-4 order-first h-fit w-full rounded-lg border border-gray-200 bg-white p-4 shadow-sm lg:order-last lg:top-24 lg:w-1/3 lg:self-start">
+        <div className="lg:sticky lg:top-24 order-first h-fit w-full rounded-lg border border-gray-200 bg-white p-4 shadow-sm lg:order-last lg:w-1/3 lg:self-start">
           <div className="relative aspect-[2/3] w-full overflow-hidden rounded-lg">
             <Image
               alt="Event poster"

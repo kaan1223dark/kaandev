@@ -12,7 +12,7 @@ export const footerLinks: FooterLink[] = [
     sublinks: [
       {
         translation: 'introduction',
-        href: '/organization',
+        href: '/hakkimizda',
       },
     ],
   },
@@ -21,11 +21,11 @@ export const footerLinks: FooterLink[] = [
     sublinks: [
       {
         translation: 'general',
-        href: '/studies',
+        href: '/etkinlikguruplari',
       },
       {
         translation: 'workshops',
-        href: '/studies/workshops',
+        href: '/etkinlikguruplari/atolyeler',
       },
     ],
   },
@@ -34,7 +34,7 @@ export const footerLinks: FooterLink[] = [
     sublinks: [
       {
         translation: 'general',
-        href: '/events',
+        href: '/etkinliktakvimi',
       },
     ],
   },
@@ -43,15 +43,15 @@ export const footerLinks: FooterLink[] = [
     sublinks: [
       {
         translation: 'general',
-        href: '/tutoring',
+        href: '/ozelders',
       },
       {
         translation: 'larpake',
-        href: '/tutoring/larpake',
+        href: '/ozelders/larpake',
       },
       {
         translation: 'faq',
-        href: '/tutoring/faq',
+        href: '/ozelders/faq',
       },
     ],
   },
@@ -60,11 +60,11 @@ export const footerLinks: FooterLink[] = [
     sublinks: [
       {
         translation: 'contact',
-        href: '/contact',
+        href: '/iletisim',
       },
       {
         translation: 'feedback',
-        href: '/contact/feedback',
+        href: '/oneriveyorum',
       },
     ],
   },

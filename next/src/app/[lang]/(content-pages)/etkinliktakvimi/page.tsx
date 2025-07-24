@@ -36,7 +36,7 @@ export default async function Events(props: EventsProps) {
   const formatEvent = (event: APIResponseData<'api::event.event'>): Event => ({
     description: getPlainText(
       event.attributes[
-        params.lang === 'en' ? 'DescriptionEn' : 'DescriptionFi'
+      params.lang === 'en' ? 'DescriptionEn' : 'DescriptionFi'
       ],
     ),
     end: new Date(event.attributes.EndDate),
