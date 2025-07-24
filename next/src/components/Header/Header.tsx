@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import luuppiSvg from '../../../public/luuppi.svg';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import HeaderActions from './HeaderActions/HeaderActions';
 import HideableLink from './HideableLinks/HideableLink';
 import ScrollListener from './ScrollListener/ScrollListener';
 
@@ -45,6 +46,7 @@ export default function Header({ dictionary, lang }: HeaderProps) {
               <div className="flex items-center justify-center max-lg:hidden">
                 <LanguageSwitcher />
               </div>
+              <HeaderActions dictionary={dictionary} lang={lang} />
             </div>
           </div>
         </nav>
@@ -63,7 +65,7 @@ export default function Header({ dictionary, lang }: HeaderProps) {
                   <span>
                     {
                       dictionary.navigation[
-                        link.translation as keyof typeof dictionary.navigation
+                      link.translation as keyof typeof dictionary.navigation
                       ]
                     }
                   </span>
@@ -88,7 +90,7 @@ export default function Header({ dictionary, lang }: HeaderProps) {
                   <span>
                     {
                       dictionary.navigation[
-                        link.translation as keyof typeof dictionary.navigation
+                      link.translation as keyof typeof dictionary.navigation
                       ]
                     }
                   </span>

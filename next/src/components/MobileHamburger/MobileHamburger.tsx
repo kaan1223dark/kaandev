@@ -1,16 +1,13 @@
 'use client';
-import { signIn, signOut } from '@/actions/auth';
 import { NavLink, navLinksMobile } from '@/libs/constants';
 import { Dictionary, SupportedLanguage } from '@/models/locale';
 import { Session } from 'next-auth';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useState } from 'react';
-import { BiLogOutCircle } from 'react-icons/bi';
 import { FaLockOpen } from 'react-icons/fa';
 import { HiMenu } from 'react-icons/hi';
 import { IoMdClose } from 'react-icons/io';
-import { RiLoginCircleLine } from 'react-icons/ri';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import './MobileHamburger.css';
 
@@ -85,7 +82,7 @@ export default function MobileHamburger({
                     <div className="flex items-center justify-between bg-secondary-400 font-bold text-white hover:cursor-auto hover:bg-secondary-400">
                       {
                         dictionary.navigation[
-                          link.translation as keyof typeof dictionary.navigation
+                        link.translation as keyof typeof dictionary.navigation
                         ]
                       }
                     </div>
@@ -102,7 +99,7 @@ export default function MobileHamburger({
                       <span>
                         {
                           dictionary.navigation[
-                            link.translation as keyof typeof dictionary.navigation
+                          link.translation as keyof typeof dictionary.navigation
                           ]
                         }
                       </span>
@@ -116,11 +113,10 @@ export default function MobileHamburger({
                       {link.sublinks?.map((sublink) => (
                         <li key={sublink.translation}>
                           <Link
-                            className={`${
-                              sublink.href === '/'
-                                ? 'disabled cursor-not-allowed opacity-50'
-                                : ''
-                            } font-bold`} // TODO: REMOVE DISABLED LINKS
+                            className={`${sublink.href === '/'
+                              ? 'disabled cursor-not-allowed opacity-50'
+                              : ''
+                              } font-bold`} // TODO: REMOVE DISABLED LINKS
                             href={
                               sublink.href.startsWith('/')
                                 ? `/${lang}${sublink.href as string}`
@@ -130,7 +126,7 @@ export default function MobileHamburger({
                           >
                             {
                               dictionary.navigation[
-                                sublink.translation as keyof typeof dictionary.navigation
+                              sublink.translation as keyof typeof dictionary.navigation
                               ]
                             }
                           </Link>
@@ -154,24 +150,7 @@ export default function MobileHamburger({
                 <IoMdClose size={32} />
               </button>
               <LanguageSwitcher />
-              {session?.user ? (
-                <button
-                  aria-label={dictionary.general.logout}
-                  className="btn btn-circle btn-ghost m-1 bg-error text-white"
-                  type="submit"
-                  onClick={async () => await signOut()}
-                >
-                  <BiLogOutCircle size={32} />
-                </button>
-              ) : (
-                <button
-                  aria-label={dictionary.general.login}
-                  className="btn btn-circle btn-ghost m-1 bg-primary-400 text-white"
-                  onClick={async () => await signIn()}
-                >
-                  <RiLoginCircleLine size={32} />
-                </button>
-              )}
+
             </div>
           </div>
         </div>
