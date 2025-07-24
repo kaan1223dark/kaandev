@@ -3,12 +3,10 @@ import { getStrapiData } from '@/libs/strapi/get-strapi-data';
 import { getStrapiUrl } from '@/libs/strapi/get-strapi-url';
 import { SupportedLanguage } from '@/models/locale';
 import { APIResponseCollection } from '@/types/types';
-import { IoCalendarOutline, IoCallOutline, IoLocationOutline } from 'react-icons/io5';
-;
-
 import { BlocksContent } from '@strapi/blocks-react-renderer';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
+import { IoCalendarOutline, IoCallOutline, IoLocationOutline } from 'react-icons/io5';
 
 function getPlainText(blocks?: BlocksContent): string {
   if (!blocks || !Array.isArray(blocks)) return '';
