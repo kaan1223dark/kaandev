@@ -51,14 +51,7 @@ export default async function Event(props: EventProps) {
     params.lang === 'en'
       ? eventData.imageEn?.data?.attributes?.url ?? eventData.image?.data?.attributes?.url
       : eventData.image?.data?.attributes?.url;
-  if (!imageUrlLocalized) {
-    // eslint-disable-next-line no-console
-    //  console.warn('Image URL bulunamadı:', JSON.stringify(eventData, null, 2));
-  }
-
   const imageUrl = imageUrlLocalized ? getStrapiUrl(imageUrlLocalized) : null;
-
-  // const imageUrsl = 'http://localhost:1337/uploads/Whats_App_Image_2025_06_19_at_18_39_35_dc250d1c68.jpeg';
 
   // eslint-disable-next-line no-console
   console.log('yazdir sayfası render edildiss! ' +
