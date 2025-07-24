@@ -83,7 +83,7 @@ export default async function Event(props: EventProps) {
               <Image
                 alt="Page banner image"
                 className="rounded-lg object-cover"
-                src={'http://localhost:1337/uploads/Whats_App_Image_2025_06_19_at_18_39_35_dc250d1c68.jpeg'}
+                src={imageUrl}
                 fill
               />
             ) : (
@@ -232,7 +232,7 @@ export async function generateMetadata(props: EventProps): Promise<Metadata> {
       title,
       description: description.slice(0, 300) + (descriptionCutted ? '...' : ''),
       url: pathname,
-      siteName: 'finikeetkinlik',
+      siteName: 'Finikeetkinlik',
       images: imageUrl,
     },
     twitter: {
