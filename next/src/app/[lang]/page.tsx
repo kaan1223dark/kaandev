@@ -1,4 +1,3 @@
-import Banner from '@/components/Banner/Banner';
 import EventsPreview from '@/components/EventsPreview/EventsPreviewcopy';
 import { getDictionary } from '@/dictionaries';
 import { getOrganizationJsonLd } from '@/libs/utils/json-ld';
@@ -21,7 +20,7 @@ export default async function Home(props: HomeProps) {
       />
 
       <EventsPreview dictionary={dictionary} lang={params.lang} />
-      <Banner lang={params.lang} />
+
     </>
   );
 }
