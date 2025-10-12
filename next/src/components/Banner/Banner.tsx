@@ -19,20 +19,10 @@ export default function Banner({ }: BannerProps) {
           <div className="relative z-10 flex h-full w-full max-md:h-32" />
           <Image
             alt="Luuppi banner"
-            className="object-cover max-lg:hidden"
+            className="object-cover"
             draggable={false}
             quality={100}
-            src={bannerDesktop}
-
-            style={{ objectFit: 'cover' }}
-            fill
-            priority
-          />
-          <Image
-            alt="Luuppi banner"
-            className="object-cover lg:hidden"
-            draggable={false}
-            quality={100}
+            sizes="100vw"
             src={bannerDesktop}
             style={{ objectFit: 'cover' }}
             fill
