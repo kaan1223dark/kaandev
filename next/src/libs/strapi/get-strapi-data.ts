@@ -39,7 +39,7 @@ export async function getStrapiData<T>(
         headers: {
           Authorization: `Bearer ${process.env.STRAPI_API_KEY}`,
         },
-        next: { tags: revalidateTags },
+        next: { revalidate: 60 },
       },
     );
 

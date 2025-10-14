@@ -10,6 +10,7 @@ import { SitemapItemLoose, SitemapStream, streamToPromise } from 'sitemap';
  * @param lang "fi" or "en
  * @returns array of static pages
  */
+export const dynamic = 'force-dynamic'; // ← bu satırı ekle
 const getStaticPages = (lang: SupportedLanguage) => {
   const staticPages = [
     // General
@@ -252,4 +253,3 @@ export async function GET() {
 
   return res;
 }
-
