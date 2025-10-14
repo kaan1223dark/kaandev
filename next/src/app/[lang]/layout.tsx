@@ -39,6 +39,7 @@ export default async function RootLayout(props: RootLayoutProps) {
   return (
     <html data-theme="light" lang={params.lang}>
       <head>
+        <meta content="CYvNuLl9AuWeWxZm7HG2n3UmeJCm43QFc8ki_YOHfi0" name="google-site-verification" />
         <PlausibleProvider
           customDomain={process.env.NEXT_PUBLIC_BASE_URL}
           domain={process.env.NEXT_PUBLIC_BASE_URL!?.replace('https://', '')}
