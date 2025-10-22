@@ -47,7 +47,7 @@ export const footerLinks: FooterLink[] = [
       },
       {
         translation: 'larpake',
-        href: '/ozelders/larpake',
+        href: '/ozelders/dersler',
       },
       {
         translation: 'faq',

@@ -46,7 +46,7 @@ export const navLinksDesktop: NavLink[] = [
       },
       {
         translation: 'larpake',
-        href: '/ozelders/larpake',
+        href: '/ozelders/dersler',
       },
       {
         translation: 'faq',
@@ -112,7 +112,7 @@ export const navLinksMobile: NavLink[] = [
       },
       {
         translation: 'larpake',
-        href: '/ozelders/larpake',
+        href: '/ozelders/dersler',
       },
       {
         translation: 'faq',

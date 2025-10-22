@@ -16,7 +16,7 @@
 
 .fc .fc-button-primary:not(:disabled).fc-button-active,
 .fc .fc-button-primary:not(:disabled):active {
-  @apply bg-primary-500;
+  @apply bg-secondary-500;
 }
 
 .fc .fc-col-header-cell-cushion {
@@ -24,7 +24,7 @@
 }
 
 .fc .fc-button-primary:hover {
-  @apply bg-primary-500;
+  @apply bg-secondary-500;
 }
 
 .fc-h-event {
