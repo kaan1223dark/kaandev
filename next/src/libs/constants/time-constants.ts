@@ -5,14 +5,14 @@ export const dateFormat = {
   day: 'numeric',
   hour: 'numeric',
   minute: 'numeric',
-  timeZone: 'Europe/Helsinki',
+  timeZone: 'Europe/Istanbul',
 } as const;
 
 /** Example: "14:00" */
 export const shortTimeFormat = {
   hour: '2-digit',
   minute: '2-digit',
-  timeZone: 'Europe/Helsinki',
+  timeZone: 'Europe/Istanbul',
 } as const;
 
 /** Example: "Mon, 1.1. 14:00" */
@@ -22,7 +22,7 @@ export const shortDateFormat = {
   month: 'numeric',
   hour: '2-digit',
   minute: '2-digit',
-  timeZone: 'Europe/Helsinki',
+  timeZone: 'Europe/Istanbul',
 } as const;
 
 /**  Example: "Monday, 1. Jan" */
@@ -30,5 +30,5 @@ export const longDateFormat = {
   weekday: 'long',
   day: 'numeric',
   month: 'short',
-  timeZone: 'Europe/Helsinki',
+  timeZone: 'Europe/Istanbul',
 } as const;

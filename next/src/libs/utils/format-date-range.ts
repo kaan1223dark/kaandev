@@ -30,7 +30,7 @@ export const formatDateRangeLong = (
           day: 'numeric',
           month: 'short',
           weekday: 'long',
-          timeZone: 'Europe/Helsinki',
+          timeZone: 'Europe/Istanbul',
         }).format(start),
       )}`;
     }
@@ -58,18 +58,18 @@ export const formatDateRangeShort = (
     return `${new Intl.DateTimeFormat(lang, {
       hour: 'numeric',
       minute: 'numeric',
-      timeZone: 'Europe/Helsinki',
+      timeZone: 'Europe/Istanbul',
     }).format(start)}`;
   }
   if (startUTC.toDateString() === endUTC.toDateString()) {
     return `${new Intl.DateTimeFormat(lang, {
       hour: 'numeric',
       minute: 'numeric',
-      timeZone: 'Europe/Helsinki',
+      timeZone: 'Europe/Istanbul',
     }).format(start)} - ${new Intl.DateTimeFormat(lang, {
       hour: 'numeric',
       minute: 'numeric',
-      timeZone: 'Europe/Helsinki',
+      timeZone: 'Europe/Istanbul',
     }).format(end)}`;
   } else {
     return `${new Intl.DateTimeFormat(lang, {
@@ -77,13 +77,13 @@ export const formatDateRangeShort = (
       day: 'numeric',
       hour: 'numeric',
       minute: 'numeric',
-      timeZone: 'Europe/Helsinki',
+      timeZone: 'Europe/Istanbul',
     }).format(start)} - ${new Intl.DateTimeFormat(lang, {
       month: 'numeric',
       day: 'numeric',
       hour: 'numeric',
       minute: 'numeric',
-      timeZone: 'Europe/Helsinki',
+      timeZone: 'Europe/Istanbul',
     }).format(end)}`;
   }
 };
