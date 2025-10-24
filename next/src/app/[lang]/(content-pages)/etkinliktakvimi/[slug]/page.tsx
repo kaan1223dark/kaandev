@@ -5,7 +5,8 @@ import { dateFormat } from '@/libs/constants';
 import { getPlainText } from '@/libs/strapi/blocks-converter';
 import { getStrapiData } from '@/libs/strapi/get-strapi-data';
 import { getStrapiUrl } from '@/libs/strapi/get-strapi-url';
-import { formatDateRangeLong } from '@/libs/utils/format-date-range';
+
+// formatDateRangeLong replaced by direct locale rendering in this page
 import { getEventJsonLd } from '@/libs/utils/json-ld';
 import { SupportedLanguage } from '@/models/locale';
 import { APIResponse, APIResponseCollection } from '@/types/types';
@@ -67,6 +68,24 @@ export default async function Event(props: EventProps) {
   const hasRegistration =
     event.data.attributes?.Registration?.TicketTypes?.length;
 
+  // Use direct locale formatting (same as your working console.log) to ensure displayed
+  // time matches the admin panel input (Turkey local time)
+  const startDt = new Date(event.data.attributes.StartDate);
+  const endDt = new Date(event.data.attributes.EndDate);
+  const eventDateStr = startDt.toLocaleDateString('tr-TR');
+  const startTimeStr = startDt.toLocaleTimeString('tr-TR', {
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+  const endTimeStr = endDt.toLocaleTimeString('tr-TR', {
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+  const eventTimeDisplay =
+    startDt.toISOString() === endDt.toISOString()
+      ? `${startTimeStr}`
+      : `${startTimeStr}-${endTimeStr}`;
+
   return (
     <>
       <Script
@@ -102,7 +121,7 @@ export default async function Event(props: EventProps) {
             </h1>
             <div className="flex flex-col opacity-40">
               <p className="text-sm">
-                {dictionary.general.content_updated}:{' '}
+                {'dictionary.general.content_updated'}:{' '}
                 {new Date(event.data.attributes.updatedAt!).toLocaleString(
                   params.lang,
                   dateFormat,
@@ -119,11 +138,7 @@ export default async function Event(props: EventProps) {
                   <IoCalendarOutline className="shrink-0 text-2xl" />
                 </div>
                 <p className="line-clamp-2">
-                  {formatDateRangeLong(
-                    new Date(event.data.attributes.StartDate),
-                    new Date(event.data.attributes.EndDate),
-                    params.lang,
-                  )}
+                  {eventDateStr} {eventTimeDisplay}
                 </p>
               </div>
               <div className="flex items-center">

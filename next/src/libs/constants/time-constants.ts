@@ -1,10 +1,10 @@
-/** Example: "2021-01-01 14:00" */
+/** Example: "01.01.2021 14:00" */
 export const dateFormat = {
   year: 'numeric',
-  month: 'numeric',
-  day: 'numeric',
-  hour: 'numeric',
-  minute: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
   timeZone: 'Europe/Istanbul',
 } as const;
 
@@ -15,20 +15,20 @@ export const shortTimeFormat = {
   timeZone: 'Europe/Istanbul',
 } as const;
 
-/** Example: "Mon, 1.1. 14:00" */
+/** Example: "Pzt, 1 Oca 14:00" */
 export const shortDateFormat = {
   weekday: 'short',
   day: 'numeric',
-  month: 'numeric',
+  month: 'short',
   hour: '2-digit',
   minute: '2-digit',
   timeZone: 'Europe/Istanbul',
 } as const;
 
-/**  Example: "Monday, 1. Jan" */
+/**  Example: "Pazartesi, 1 Ocak" */
 export const longDateFormat = {
   weekday: 'long',
   day: 'numeric',
-  month: 'short',
+  month: 'long',
   timeZone: 'Europe/Istanbul',
 } as const;

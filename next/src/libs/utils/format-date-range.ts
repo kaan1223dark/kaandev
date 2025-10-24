@@ -11,12 +11,6 @@ export const formatDateRangeLong = (
     start.getTime() + start.getTimezoneOffset() * 60000,
   );
 
-  /* eslint-disable */
-  // ... diğer importlar ve kodlar
-  console.log('desteklenen dilleri yazdir' + lang);
-  // ... diğer kodlar
-  /* eslint-enable */
-
   const endUTC = new Date(end.getTime() + end.getTimezoneOffset() * 60000);
 
   const isMultipleDays = startUTC.toDateString() !== endUTC.toDateString();
