@@ -27,7 +27,7 @@ export default function ViewEventsDialog({
             month: 'long',
             year: 'numeric',
             day: 'numeric',
-          }).format(events[0]?.start)}{' '}
+          }).format(events[0]?.start)}{''}
         </h2>
         {events && events.length > 0 && (
           <>
@@ -44,7 +44,7 @@ export default function ViewEventsDialog({
                   className="mb-4 block rounded-lg bg-background-50 p-4"
                   href={`/${lang}/etkinliktakvimi/${event.id}`}
                 >
-                  <h3 className="text-lg font-bold">{'sss'}</h3>
+                  <h3 className="text-lg font-bold">{event.title}</h3>
                   <h4>{eventTimeDisplay}</h4>
                   <p className="line-clamp-3 text-sm">{event.description}</p>
                 </Link>
