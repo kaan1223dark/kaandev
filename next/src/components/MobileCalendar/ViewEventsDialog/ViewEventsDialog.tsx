@@ -1,4 +1,3 @@
-import { formatDateRangeShort } from '@/libs/utils/format-date-range';
 import { Event } from '@/models/event';
 import { Dictionary, SupportedLanguage } from '@/models/locale';
 import Link from 'next/link';
@@ -32,17 +31,25 @@ export default function ViewEventsDialog({
         </h2>
         {events && events.length > 0 && (
           <>
-            {events.map((event) => (
-              <Link
-                key={event.id}
-                className="mb-4 block rounded-lg bg-background-50 p-4"
-                href={`/${lang}/etkinliktakvimi/${event.id}`}
-              >
-                <h3 className="text-lg font-bold">{event.title}</h3>
-                <h4>{formatDateRangeShort(event.start, event.end, lang)} </h4>
-                <p className="line-clamp-3 text-sm">{event.description}</p>
-              </Link>
-            ))}
+            {events.map((event) => {
+              const startDt = new Date(event.start);
+              const endDt = new Date(event.end);
+              const startTimeStr = startDt.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
+              const endTimeStr = endDt.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
+              const eventTimeDisplay = startDt.toISOString() === endDt.toISOString() ? startTimeStr : `${startTimeStr}-${endTimeStr}`;
+
+              return (
+                <Link
+                  key={event.id}
+                  className="mb-4 block rounded-lg bg-background-50 p-4"
+                  href={`/${lang}/etkinliktakvimi/${event.id}`}
+                >
+                  <h3 className="text-lg font-bold">{'sss'}</h3>
+                  <h4>{eventTimeDisplay}</h4>
+                  <p className="line-clamp-3 text-sm">{event.description}</p>
+                </Link>
+              );
+            })}
           </>
         )}
         <div className="modal-action">

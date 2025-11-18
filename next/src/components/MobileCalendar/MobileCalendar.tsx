@@ -30,7 +30,7 @@ const groupEventsByStartDate = (events: Event[]): Record<string, Event[]> =>
     .reduce(
       (acc, event) => {
         const startDate = new Intl.DateTimeFormat('tr', {
-          timeZone: 'Europe/Helsinki',
+          timeZone: 'Europe/Istanbul',
           year: 'numeric',
           month: '2-digit',
           day: '2-digit',
