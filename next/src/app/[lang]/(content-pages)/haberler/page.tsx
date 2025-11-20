@@ -102,7 +102,7 @@ export default async function News(props: NewsProps) {
                                     className={
                                         'inline-block text-2xl font-bold hover:underline max-lg:text-xl'
                                     }
-                                    href={`/${params.lang}/news/${news.attributes.slug}`}
+                                    href={`/${params.lang}/haberler/${news.attributes.slug}`}
                                 >
                                     {news.attributes.title}
                                 </Link>
