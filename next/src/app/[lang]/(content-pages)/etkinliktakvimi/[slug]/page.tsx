@@ -140,6 +140,9 @@ export default async function Event(props: EventProps) {
                 <p className="line-clamp-2">
                   {eventDateStr} {eventTimeDisplay}
                 </p>
+                <p className="text-xs text-gray-500">
+                  StartDate (raw): {String(event.data.attributes.StartDate)}
+                </p>
               </div>
               <div className="flex items-center">
                 <div className="mr-2 flex items-center justify-center rounded-full bg-primary-400 p-2 text-white">
