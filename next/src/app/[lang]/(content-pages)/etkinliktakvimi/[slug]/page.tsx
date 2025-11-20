@@ -123,7 +123,7 @@ export default async function Event(props: EventProps) {
             </h1>
             <div className="flex flex-col opacity-40">
               <p className="text-sm">
-                {'dictionary.general.content_updated'}:{' '}
+                {dictionary.general.content_updated}:{' '}
                 {new Date(event.data.attributes.updatedAt!).toLocaleString(
                   params.lang,
                   dateFormat,
@@ -141,9 +141,6 @@ export default async function Event(props: EventProps) {
                 </div>
                 <p className="line-clamp-2">
                   {eventDateStr} {eventTimeDisplay}
-                </p>
-                <p className="text-xs text-gray-500">
-                  StartDate (raw): {String(event.data.attributes.StartDate)}
                 </p>
               </div>
               <div className="flex items-center">
