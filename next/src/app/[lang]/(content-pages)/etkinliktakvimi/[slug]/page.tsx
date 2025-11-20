@@ -72,14 +72,16 @@ export default async function Event(props: EventProps) {
   // time matches the admin panel input (Turkey local time)
   const startDt = new Date(event.data.attributes.StartDate);
   const endDt = new Date(event.data.attributes.EndDate);
-  const eventDateStr = startDt.toLocaleDateString('tr-TR');
+  const eventDateStr = startDt.toLocaleDateString('tr-TR', { timeZone: 'Europe/Istanbul' });
   const startTimeStr = startDt.toLocaleTimeString('tr-TR', {
     hour: '2-digit',
     minute: '2-digit',
+    timeZone: 'Europe/Istanbul',
   });
   const endTimeStr = endDt.toLocaleTimeString('tr-TR', {
     hour: '2-digit',
     minute: '2-digit',
+    timeZone: 'Europe/Istanbul',
   });
   const eventTimeDisplay =
     startDt.toISOString() === endDt.toISOString()

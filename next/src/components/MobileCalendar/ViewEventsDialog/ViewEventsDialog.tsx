@@ -34,8 +34,8 @@ export default function ViewEventsDialog({
             {events.map((event) => {
               const startDt = new Date(event.start);
               const endDt = new Date(event.end);
-              const startTimeStr = startDt.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
-              const endTimeStr = endDt.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
+              const startTimeStr = startDt.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Istanbul' });
+              const endTimeStr = endDt.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Istanbul' });
               const eventTimeDisplay = startDt.toISOString() === endDt.toISOString() ? startTimeStr : `${startTimeStr}-${endTimeStr}`;
 
               return (
