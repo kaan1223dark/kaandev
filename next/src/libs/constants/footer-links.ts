@@ -17,6 +17,15 @@ export const footerLinks: FooterLink[] = [
     ],
   },
   {
+    translation: 'news',
+    sublinks: [
+      {
+        translation: 'news',
+        href: '/haberler',
+      },
+    ],
+  },
+  {
     translation: 'studies',
     sublinks: [
       {

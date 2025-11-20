@@ -25,6 +25,10 @@ export const navLinksDesktop: NavLink[] = [
     ],
   },
   {
+    translation: 'news',
+    href: '/haberler',
+  },
+  {
     translation: 'studies',
     sublinks: [
       {
@@ -82,13 +86,8 @@ export const navLinksMobile: NavLink[] = [
     href: '/',
   },
   {
-    translation: 'organization',
-    sublinks: [
-      {
-        translation: 'introduction',
-        href: '/hakkimizda',
-      },
-    ],
+    translation: 'news',
+    href: '/haberler',
   },
   {
     translation: 'studies',

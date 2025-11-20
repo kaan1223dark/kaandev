@@ -36,7 +36,7 @@ export default function Header({ dictionary, lang }: HeaderProps) {
               href={`/${lang}`}
             >
               <Image
-                alt="Luuppi logo"
+                alt="Finikeetinliklogo"
                 className={'object-contain'}
                 draggable={false}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
