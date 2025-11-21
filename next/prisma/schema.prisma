@@ -10,13 +10,12 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
 }
 
 model User {
   id                Int                 @id @default(autoincrement())
-  /// User's EntraID UUID
-  entraUserUuid     String              @unique
+  /// User's EntraID UUID (for Azure) or generated UUID for local users
+  entraUserUuid     String              @unique @default(uuid())
   email             String              @unique
   username          String?
   firstName         String?
@@ -24,6 +23,10 @@ model User {
   domicle           String?
   preferredFullName String?
   major             Major               @default(OTHER)
+  /// Local auth password hash (optional). If set, this user can sign in with credentials.
+  passwordHash      String?
+  /// Whether this account can authenticate with local username/password
+  localAuth         Boolean             @default(false)
   createdAt         DateTime            @default(now())
   updatedAt         DateTime            @updatedAt
   registrations     EventRegistration[]

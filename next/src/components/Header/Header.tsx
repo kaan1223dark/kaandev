@@ -21,11 +21,11 @@ export default function Header({ dictionary, lang }: HeaderProps) {
   return (
     <div>
       <ScrollListener />
-      <div className="h-36 bg-primary-800 max-xl:h-28 max-lg:h-16" />
-      <header className={'fixed top-0 z-50 w-full bg-primary-800 text-white'}>
+      <div className="h-36 bg-primary-800 max-xl:h-28 max-lg:h-16 dark:bg-primary-200" />
+      <header className="fixed top-0 z-50 w-full bg-primary-800 text-white dark:bg-primary-200">
         <nav
           className={
-            'custom-scroll-nav h-24 bg-primary-500 px-4 transition-all duration-300 max-xl:h-16 max-xl:shadow-md'
+            'custom-scroll-nav h-24 bg-primary-500 dark:bg-[#5c61a3]  px-4 transition-all duration-300 max-xl:h-16 max-xl:shadow-md'
           }
         >
           <div className="mx-auto flex h-full max-w-[1200px] items-center justify-between">
@@ -36,7 +36,7 @@ export default function Header({ dictionary, lang }: HeaderProps) {
               href={`/${lang}`}
             >
               <Image
-                alt="Finikeetinliklogo"
+                alt="Luuppi logo"
                 className={'object-contain'}
                 draggable={false}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -47,10 +47,10 @@ export default function Header({ dictionary, lang }: HeaderProps) {
             </Link>
             <div className="flex items-center gap-4">
               {(isLocalEnv || isDevEnv) && (
-                <div className="flex items-center gap-1.5 rounded-sm bg-red-600 px-3 py-1 shadow-md">
-                  <div className="h-2 w-2 animate-pulse rounded-full bg-white" />
-                  <span className="font-sans text-[13px] font-semibold text-white">
-                    {isLocalEnv ? 'Test Aşamasındadır' : 'Test Aşamasındadır'}
+                <div className="flex items-center gap-1.5 rounded-sm bg-violet-400/30 px-2 py-0.5">
+                  <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-violet-300" />
+                  <span className="font-mono text-[11px] font-medium text-violet-200">
+                    {isLocalEnv ? 'Localhost' : 'Development'}
                   </span>
                 </div>
               )}
@@ -70,7 +70,7 @@ export default function Header({ dictionary, lang }: HeaderProps) {
               {link.sublinks && link.sublinks.length > 0 ? (
                 <div
                   className={
-                    'custom-scroll-text flex h-full items-center justify-center p-2 text-lg font-bold transition-all duration-300 ease-in-out hover:bg-primary-200 group-hover:bg-primary-200 max-xl:text-base'
+                    'custom-scroll-text flex h-full items-center justify-center p-2 text-lg font-bold transition-all duration-300 ease-in-out hover:bg-primary-200 group-hover:bg-primary-200 max-xl:text-base dark:group-hover:bg-background-700'
                   }
                 >
                   <span>
@@ -90,7 +90,7 @@ export default function Header({ dictionary, lang }: HeaderProps) {
               ) : (
                 <Link
                   className={
-                    'custom-scroll-text flex h-full items-center justify-center p-2 text-lg font-bold transition-all duration-300 ease-in-out hover:bg-primary-200 group-hover:bg-primary-200 max-xl:text-base'
+                    'custom-scroll-text flex h-full items-center justify-center p-2 text-lg font-bold transition-all duration-300 ease-in-out hover:bg-primary-200 group-hover:bg-primary-200 max-xl:text-base dark:group-hover:bg-background-700'
                   }
                   href={
                     link.href?.startsWith('/')
@@ -116,7 +116,7 @@ export default function Header({ dictionary, lang }: HeaderProps) {
                 </Link>
               )}
               {link.sublinks && link.sublinks.length > 0 && (
-                <div className="invisible absolute z-50 flex min-w-full flex-col bg-gray-100 px-2 py-4 text-gray-800 shadow-xl group-hover:visible">
+                <div className="invisible absolute z-50 flex min-w-full flex-col bg-gray-100 px-2 py-4 text-gray-800 shadow-xl group-hover:visible dark:bg-base-200 dark:text-background-950">
                   {link.sublinks.map((sublink) => (
                     <HideableLink
                       key={sublink.translation}
