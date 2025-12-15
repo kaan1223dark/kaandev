@@ -2,10 +2,10 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Luuppi ry',
-    short_name: 'Luuppi',
+    name: 'Finike Etkinlik',
+    short_name: 'Finike Etkinlik',
     description:
-      'Luuppi ry is subject assosiation for students of mathematics, statistical data analysis and computer science at Tampere University.',
+      'Finike Etkinlik Platformu Finikede kültürel etkinlikleri destekleyen gönüllülerden oluşan bir çatı oluşumudur.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
