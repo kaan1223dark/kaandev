@@ -36,7 +36,7 @@ export default function EventsPreview({
           href={`/${lang}/etkinlikguruplari`}
         >
           {dictionary.pages_home.events_preview.event_groups ||
-            'Etkinlik Grupları'}
+            'Etkinlik Gurupları'}
         </Link>
       </div>
 
