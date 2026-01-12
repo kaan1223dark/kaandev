@@ -172,7 +172,7 @@
     "songbook": "Şarkı kitabı",
     "organization": "Hakkımızda",
     "introduction": "Giriş",
-    "studies": "Etkinlik Gurupları",
+    "studies": "Etkinlik Grupları",
     "tutoring": "Özel Ders",
     "events": "Etkinlik Takvimi",
     "news": "Platformdan Haberler",
@@ -225,7 +225,7 @@
       "title": "Finike Etkinlik Platformu",
       "subtitle": "Finike'de kültürel etkinlikleri destekleyen gönüllülerden oluşan bir çatı oluşumudur.",
       "event_calendar": "Etkinlik Takvimi",
-      "event_groups": "Etkinlik Gurupları",
+      "event_groups": "Etkinlik Grupları",
       "courses_and_private_lessons": "Kurslar ve Özel Dersler"
     },
     "news": {
